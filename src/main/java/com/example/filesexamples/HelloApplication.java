@@ -17,18 +17,18 @@ public class HelloApplication extends Application {
         String filePath = "src/main/resources/com/example/filesexamples/person.txt";
         System.out.println("Loading file:" + filePath);
         FIleCRUD fIleCRUD = new FIleCRUD(filePath);
-        //fIleCRUD.create("Sebastian");
-        //fIleCRUD.create("Juan");
-        //fIleCRUD.create("Felipe");
+        fIleCRUD.create("Sebastian");
+        fIleCRUD.create("Juan");
+        fIleCRUD.create("Felipe");
 
         ArrayList<String> people = fIleCRUD.read();
         System.out.println("People:" + people);
 
-        fIleCRUD.update(0, "Carlos");
+        fIleCRUD.update(1, "Carlos");
         people = fIleCRUD.read();
         System.out.println("People:" + people);
 
-        fIleCRUD.delete(0);
+        fIleCRUD.delete(4);
         people = fIleCRUD.read();
         System.out.println("People:" + people);
 
